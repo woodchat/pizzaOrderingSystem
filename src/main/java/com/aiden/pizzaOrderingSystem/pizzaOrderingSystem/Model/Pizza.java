@@ -25,7 +25,7 @@ public class Pizza {
     @JsonBackReference
     private Outlet outlet;
 
-    private int outletId;
+    private int outlet_id;
 
     @NotNull
     private String name;

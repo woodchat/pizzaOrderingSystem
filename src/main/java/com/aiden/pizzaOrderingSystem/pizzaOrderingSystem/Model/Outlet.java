@@ -47,14 +47,14 @@ public class Outlet {
     public Outlet() {
     }
 
-    public Outlet(int id, String name, String city, String address, String email, String phone, Date open_at,
-                      Date close_at) {
+    public Outlet(int id, String name, String city, String address, String email, String phone, Date openAt,
+                      Date closeAt) {
         this.id = id;
         this.name = name;
         this.address = address;
         this.email = email;
         this.phone = phone;
-        this.openAt = new Time(open_at.getTime());
-        this.closeAt = new Time(close_at.getTime());
+        this.openAt = new Time(openAt.getTime());
+        this.closeAt = new Time(closeAt.getTime());
     }
 }

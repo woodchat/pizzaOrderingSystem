@@ -38,8 +38,8 @@ public class PizzaService {
     }
 
     public Pizza createPizza(Pizza pizza) {
-        Outlet parentOutlet = outletJpaRepo.findById(pizza.getOutletId()).orElse(null);
-        if (parentOutlet == null)
+        Outlet parentOutlet = outletJpaRepo.findById(pizza.getOutlet_id()).orElse(null);
+        if (parentOutlet != null)
             return null;
         else {
             pizza.setOutlet(parentOutlet);
