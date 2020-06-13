@@ -39,7 +39,7 @@ public class PizzaService {
 
     public Pizza createPizza(Pizza pizza) {
         Outlet parentOutlet = outletJpaRepo.findById(pizza.getOutlet_id()).orElse(null);
-        if (parentOutlet != null)
+        if (parentOutlet == null)
             return null;
         else {
             pizza.setOutlet(parentOutlet);
@@ -51,7 +51,7 @@ public class PizzaService {
         Pizza getPizza = this.pizzaJpaRepo.findById(pizza.getId()).orElse(null);
         if (getPizza == null)
             return null;
-        return this.pizzaJpaRepo.save(getPizza);
+        return this.pizzaJpaRepo.save(pizza);
     }
     public void deletePizza(int pizzaId) {
         Pizza pizza = this.pizzaJpaRepo.findById(pizzaId).orElse(null);

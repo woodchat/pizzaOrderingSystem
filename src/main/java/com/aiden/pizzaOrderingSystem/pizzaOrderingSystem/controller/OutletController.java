@@ -19,7 +19,7 @@ public class OutletController {
         if (outlet==null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         } else {
-            return new ResponseEntity<>(HttpStatus.FOUND);
+            return new ResponseEntity<>(outlet, HttpStatus.FOUND);
         }
     }
 
